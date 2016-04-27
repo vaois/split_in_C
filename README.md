@@ -1,0 +1,2 @@
+# split_in_C
+By C/C + + programming under LINUX file segmentation function, you can specify a file segmentation, the number of blocks for example based on size of 3 m's file. The dat file for 2 piece break up, you can get the file. The dat. 0 and the file. The dat. 1 two files, the size of 1 m respectively. The same firm Now file integration function, can put the file. The dat. 0 and the file. The dat. 1 into file file. Dat, content and source files. Reference: open, close, read, write, lseek, etc.
