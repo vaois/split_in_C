@@ -19,8 +19,8 @@ int main(int argc,char *argv[])
     avg=len/2; 
     printf("size %d\n",len);
     out = open(argv[2], O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
-out1 = open(argv[3], O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);   
- printf("01\n");
+    out1 = open(argv[3], O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);   
+   // printf("01\n");
    // while((nread = read(in,block,sizeof(block))) > 0 && avg>0)
    //    { write(out,block,nread);
              // avg-=1024;
@@ -29,19 +29,23 @@ out1 = open(argv[3], O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
       {    if(avg>0)
           {  write(out,&c,1);
               avg--;
-	  }
-else
-{
+	      }
+     else
+      {
+
 	write(out1,&c,1);
 
-}
+      }
  // printf("avg %d",avg);
    //  lseek(in,0,SEEK_CUR);
     //out1 = open(argv[3], O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
   // printf("02\n");
     //while((nread = read(in,block,sizeof(block))) > 0)
       // write(out,block,nread);
-          }  
+       } 
+       close(in);
+       close(out);
+       close(out1); 
     exit(0);
 }
 
