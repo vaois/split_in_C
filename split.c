@@ -13,6 +13,11 @@ int main(int argc,char *argv[])
     size_t len;
     struct stat statbuf;
     size_t avg;
+    if(argc < 3)
+    {
+    	printf("usage:./%s [filein] [fileout1] [fileout2]",argv[0]);
+    	exit(1);
+    }
     in = open(argv[1], O_RDONLY);
     stat(argv[1],&statbuf);
     len=statbuf.st_size;
