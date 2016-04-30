@@ -25,11 +25,7 @@ int main(int argc,char *argv[])
     printf("full size %d\n",len);
     out = open(argv[2], O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
     out1 = open(argv[3], O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);   
-<<<<<<< HEAD
-   // printf("01\n");
-=======
     //printf("01\n");            //for testing
->>>>>>> feature
    // while((nread = read(in,block,sizeof(block))) > 0 && avg>0)
    //    { write(out,block,nread);
              // avg-=1024;
